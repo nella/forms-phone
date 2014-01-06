@@ -1,0 +1,32 @@
+{
+	"name": "nella/forms-phone",
+	"description": "Phone control for Nette Forms.",
+	"homepage": "http://doc.nellafw.org/forms/phone",
+	"type": "library",
+	"keywords": ["nette", "forms", "control", "phone", "input"],
+	"license": "MIT",
+	"authors": [
+	{
+		"name": "Patrik Votoček",
+		"email": "patrik@votocek.cz",
+		"homepage": "http://patrik.votocek.cz",
+		"role": "Developer"
+	}
+	],
+	"support": {
+		"issues": "https://github.com/nella/forms-phone/issues",
+		"source": "https://github.com/nella/forms-phone"
+	},
+	"autoload": {
+		"psr-4": {
+			"Nella\\Forms\\Controls\\": "Nella/Forms/Controls"
+		}
+	},
+	"require": {
+		"php": ">=5.3.1",
+		"nette/nette": "~2.1.0"
+	},
+	"require-dev": {
+		"nette/tester": "~0.9.5"
+	}
+}
