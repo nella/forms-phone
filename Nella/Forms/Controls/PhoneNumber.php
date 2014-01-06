@@ -435,6 +435,7 @@ class PhoneNumber extends \Nette\Forms\Controls\BaseControl
 	 */
 	private function validatePhoneNumberString($value)
 	{
+		$value = $this->normalizePhoneNumber($value);
 		return (bool) Strings::match($value, $this->getPattern());
 	}
 
