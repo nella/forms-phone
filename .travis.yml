@@ -16,4 +16,4 @@ before_script:
   - composer self-update
   - composer install --no-interaction --prefer-source --dev
 
-script: VERBOSE=true ./tests/run-tests.sh -s tests/
+script: vendor/bin/parallel-lint -e php,phpt Nella tests && vendor/bin/tester -p php tests
