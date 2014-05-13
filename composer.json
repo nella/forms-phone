@@ -19,7 +19,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Nella\\Forms\\Controls\\": "Nella/Forms/Controls"
+			"Nella\\Forms\\Controls\\": "src/Nella/Forms/Controls"
 		}
 	},
 	"require": {
