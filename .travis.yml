@@ -16,4 +16,4 @@ before_script:
   - composer self-update
   - composer install --no-interaction --prefer-source --dev
 
-script: vendor/bin/parallel-lint -e php,phpt Nella tests && vendor/bin/tester -p php tests
+script: vendor/bin/parallel-lint -e php,phpt src tests && vendor/bin/tester -s -p php -c tests/php-unix.ini tests
