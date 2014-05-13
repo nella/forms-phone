@@ -18,6 +18,11 @@ Usage
 $form = new \Nette\Forms\Form;
 $form->addComponent(new \Nella\Forms\Controls\PhoneNumber('Phone'), 'phone');
 
+// or
+
+\Nella\Forms\Controls\PhoneNumber::register();
+$form->addPhone('phone', 'Phone');
+
 // Optional phone numnber validation
 $form['phone']
 	->addCondition(\Nette\Application\UI\Form::FILLED)

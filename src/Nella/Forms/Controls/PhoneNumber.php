@@ -306,6 +306,9 @@ class PhoneNumber extends \Nette\Forms\Controls\BaseControl
 		'+999',
 	);
 
+	/** @var bool */
+	private static $registered = false;
+
 	/** @var string */
 	private $prefix;
 	/** @var string */
@@ -460,5 +463,23 @@ class PhoneNumber extends \Nette\Forms\Controls\BaseControl
 		));
 
 		return $value;
+	}
+
+	public static function register()
+	{
+		if (static::$registered) {
+			throw new \Nette\InvalidStateException('PhoneNumber control already registered.');
+		}
+
+		static::$registered = true;
+
+		$class = get_called_class();
+		$callback = function (\Nette\Forms\Container $_this, $name, $label = NULL) use ($class) {
+			$control = new $class($label);
+			$_this->addComponent($control, $name);
+			return $control;
+		};
+
+		\Nette\Forms\Container::extensionMethod('addPhone', $callback);
 	}
 }

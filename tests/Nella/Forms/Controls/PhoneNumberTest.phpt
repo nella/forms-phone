@@ -15,13 +15,8 @@ namespace Nella\Forms\Controls;
 
 use Tester\Assert;
 
-$container = require __DIR__ . '/../../../bootstrap.php';
+require __DIR__ . '/../../../bootstrap.php';
 
-/**
- * Phone number form control
- *
- * @author        Patrik Votoček
- */
 class PhoneNumberTest extends \Tester\TestCase
 {
 	/**
@@ -164,6 +159,27 @@ class PhoneNumberTest extends \Tester\TestCase
 		));
 
 		Assert::false($control->validatePhoneNumber($control));
+	}
+
+	/**
+	 * @throws \Nette\InvalidStateException
+	 */
+	public function testRegistrationMultiple()
+	{
+		PhoneNumber::register();
+		PhoneNumber::register();
+	}
+
+	public function testRegistration()
+	{
+		PhoneNumber::register();
+
+		$form = new \Nette\Forms\Form;
+		$control = $form->addPhone('test', 'Test');
+		Assert::type('Nella\Forms\Controls\PhoneNumber', $control);
+		Assert::equal('test', $control->getName());
+		Assert::equal('Test', $control->caption);
+		Assert::same($form, $control->getForm());
 	}
 
 	private function createControl($data = array())
