@@ -322,6 +322,8 @@ class PhoneNumber extends \Nette\Forms\Controls\BaseControl
 	public function setValue($value)
 	{
 		if ($value === NULL) {
+			$this->prefix = NULL;
+			$this->number = NULL;
 			return $this;
 		}
 
