@@ -1,6 +1,6 @@
 <?php
 /**
- * Test: Nella\Forms\Controls\PhoneNumber
+ * Test: Nella\Forms\Controls\PhoneNumberInput
  * @testCase
  *
  * This file is part of the Nella Project (http://nella-project.org).
@@ -17,7 +17,7 @@ use Tester\Assert;
 
 require __DIR__ . '/../../../bootstrap.php';
 
-class PhoneNumberTest extends \Tester\TestCase
+class PhoneNumberInputTest extends \Tester\TestCase
 {
 	/**
 	 * @return array[]|array
@@ -58,7 +58,7 @@ class PhoneNumberTest extends \Tester\TestCase
 	 */
 	public function testValidPhoneNumbers($input, $expected)
 	{
-		$control = new PhoneNumber;
+		$control = new PhoneNumberInput;
 
 		$control->setValue($input);
 
@@ -72,7 +72,7 @@ class PhoneNumberTest extends \Tester\TestCase
 	 */
 	public function testInvalidPhoneNumbers($input)
 	{
-		$control = new PhoneNumber;
+		$control = new PhoneNumberInput;
 
 		Assert::exception(function() use($control, $input) {
 			$control->setValue($input);
@@ -82,7 +82,7 @@ class PhoneNumberTest extends \Tester\TestCase
 	public function testHtmlPartNumber()
 	{
 		$form = new \Nette\Forms\Form;
-		$control = new PhoneNumber;
+		$control = new PhoneNumberInput;
 		$form->addComponent($control, 'phone');
 		$control->setValue('420234567890');
 
@@ -94,7 +94,7 @@ class PhoneNumberTest extends \Tester\TestCase
 	public function testHtmlPartPrefix()
 	{
 		$form = new \Nette\Forms\Form;
-		$control = new PhoneNumber;
+		$control = new PhoneNumberInput;
 		$form->addComponent($control, 'phone');
 		$control->setValue('420234567890');
 
@@ -106,7 +106,7 @@ class PhoneNumberTest extends \Tester\TestCase
 	public function testHtml()
 	{
 		$form = new \Nette\Forms\Form;
-		$control = new PhoneNumber;
+		$control = new PhoneNumberInput;
 		$form->addComponent($control, 'phone');
 		$control->setValue('420234567890');
 
@@ -166,17 +166,17 @@ class PhoneNumberTest extends \Tester\TestCase
 	 */
 	public function testRegistrationMultiple()
 	{
-		PhoneNumber::register();
-		PhoneNumber::register();
+		PhoneNumberInput::register();
+		PhoneNumberInput::register();
 	}
 
 	public function testRegistration()
 	{
-		PhoneNumber::register();
+		PhoneNumberInput::register();
 
 		$form = new \Nette\Forms\Form;
 		$control = $form->addPhone('test', 'Test');
-		Assert::type('Nella\Forms\Controls\PhoneNumber', $control);
+		Assert::type('Nella\Forms\Controls\PhoneNumberInput', $control);
 		Assert::equal('test', $control->getName());
 		Assert::equal('Test', $control->caption);
 		Assert::same($form, $control->getForm());
@@ -189,11 +189,11 @@ class PhoneNumberTest extends \Tester\TestCase
 		$_POST = $data;
 
 		$form = new \Nette\Forms\Form;
-		$control = new PhoneNumber;
+		$control = new PhoneNumberInput;
 		$form->addComponent($control, 'phone');
 
 		return $control;
 	}
 }
 
-id(new PhoneNumberTest)->run(isset($_SERVER['argv'][1]) ? $_SERVER['argv'][1] : NULL);
+id(new PhoneNumberInputTest)->run(isset($_SERVER['argv'][1]) ? $_SERVER['argv'][1] : NULL);
