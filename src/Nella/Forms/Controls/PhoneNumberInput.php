@@ -28,7 +28,7 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 	const NAME_NUMBER = 'number';
 
 	/** @var array */
-	private static $phonePrefixes = array(
+	protected static $phonePrefixes = array(
 		'+1',
 		'+20',
 		'+27',
