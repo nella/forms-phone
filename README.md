@@ -1,7 +1,10 @@
 Phone number control for [Nette Framework](http://nette.org)
 =============================================================================================
 
-[![Latest Stable Version](https://poser.pugx.org/nella/forms-phone/v/stable.png)](https://packagist.org/packages/nella/forms-phone) | [![Build Status](https://travis-ci.org/nella/forms-phone.png?branch=master)](https://travis-ci.org/nella/forms-phone)
+[![Build Status](https://travis-ci.org/nella/forms-phone.svg?branch=master)](https://travis-ci.org/nella/forms-phone)
+[![Latest Stable Version](https://poser.pugx.org/nella/forms-phone/version.png)](https://packagist.org/packages/nella/forms-phone)
+[![Composer Downloads](https://poser.pugx.org/nella/forms-phone/d/total.png)](https://packagist.org/packages/nella/forms-phone)
+[![Dependency Status](https://www.versioneye.com/user/projects/534bc4e7fe0d0774a80000f4/badge.svg?style=flat)](https://www.versioneye.com/user/projects/534bc4e7fe0d0774a80000f4)
 
 Installation
 ------------
