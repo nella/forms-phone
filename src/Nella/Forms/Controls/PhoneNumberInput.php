@@ -16,12 +16,13 @@ use Nette\Forms\Form;
 /**
  * Phone number form control
  *
- * @author        Patrik Votoček
+ * @author Patrik Votoček
  *
  * @property string $value
  */
 class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 {
+
 	/** @var string */
 	const NAME_PREFIX = 'prefix';
 	/** @var string */
@@ -307,16 +308,17 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 	);
 
 	/** @var bool */
-	private static $registered = false;
+	private static $registered = FALSE;
 
 	/** @var string */
 	private $prefix;
+
 	/** @var string */
 	private $number;
 
 	/**
 	 * @param string
-	 * @return PhoneNumberInput
+	 * @return \Nella\Forms\Controls\PhoneNumberInput
 	 * @throws \Nette\InvalidArgumentException
 	 */
 	public function setValue($value)
@@ -346,7 +348,7 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 	}
 
 	/**
-	 * @return string|null
+	 * @return string|NULL
 	 */
 	public function getValue()
 	{
@@ -474,7 +476,7 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 			throw new \Nette\InvalidStateException('PhoneNumber control already registered.');
 		}
 
-		static::$registered = true;
+		static::$registered = TRUE;
 
 		$class = get_called_class();
 		$callback = function (\Nette\Forms\Container $_this, $name, $label = NULL) use ($class) {
@@ -485,4 +487,5 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 
 		\Nette\Forms\Container::extensionMethod('addPhone', $callback);
 	}
+
 }
