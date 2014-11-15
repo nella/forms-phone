@@ -182,6 +182,35 @@ class PhoneNumberInputTest extends \Tester\TestCase
 		Assert::same($form, $control->getForm());
 	}
 
+	public function testDefaultPrefix()
+	{
+		$control = $this->createControl();
+
+		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('prefix'));
+		Assert::false($dq->has("select option[selected]"));
+
+		$control->setDefaultPrefix('+420');
+
+		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('prefix'));
+		Assert::true($dq->has("select option[selected]"));
+		Assert::true($dq->has("select option[value=+420][selected]"));
+
+		$control->setDefaultPrefix(NULL);
+
+		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('prefix'));
+		Assert::false($dq->has("select option[selected]"));
+	}
+
+	/**
+	 * @throws \Nette\InvalidArgumentException
+	 */
+	public function testDefaultPrefixInvalid()
+	{
+		$control = $this->createControl();
+
+		$control->setDefaultPrefix(FALSE);
+	}
+
 	private function createControl($data = array())
 	{
 		$_SERVER['REQUEST_METHOD'] = 'POST';

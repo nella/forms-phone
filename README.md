@@ -26,11 +26,14 @@ $form->addComponent(new \Nella\Forms\Controls\PhoneNumberInput('Phone'), 'phone'
 \Nella\Forms\Controls\PhoneNumberInput::register();
 $form->addPhone('phone', 'Phone');
 
-// Optional phone numnber validation
+// Optional phone number validation
 $form['phone']
 	->addCondition(\Nette\Application\UI\Form::FILLED)
 		->addRule([$form['phone'], 'validatePhoneNumber'], 'Phone number is invalid');
-
+		
+// Optional phone number default prefix
+$control = $form->addPhone('phone', 'Phone');
+$control->setDefaultPrefix('+420');
 ```
 
 Manual rendering
