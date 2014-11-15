@@ -316,6 +316,9 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 	/** @var string */
 	private $number;
 
+	/** @var string */
+	private $defaultPrefix;
+
 	/**
 	 * @param string
 	 * @return \Nella\Forms\Controls\PhoneNumberInput
@@ -365,6 +368,20 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 	}
 
 	/**
+	 * @param string
+	 * @return \Nella\Forms\Controls\PhoneNumberInput
+	 */
+	public function setDefaultPrefix($prefix)
+	{
+		if (!in_array($prefix, static::$phonePrefixes, TRUE) && !is_null($prefix)) {
+			throw new \Nette\InvalidArgumentException('This prefix is not supported');
+		}
+		$this->defaultPrefix = $prefix;
+
+		return $this;
+	}
+
+	/**
 	 * @return bool
 	 */
 	public function isFilled()
@@ -396,7 +413,7 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 			$control = \Nette\Forms\Helpers::createSelectBox(
 				array_combine(static::$phonePrefixes, static::$phonePrefixes),
 				array(
-					'selected?' => $this->prefix,
+					'selected?' => $this->prefix === NULL ? $this->defaultPrefix : $this->prefix,
 				)
 			);
 			$control->name($name . '[' . static::NAME_PREFIX . ']')->id($this->getHtmlId());
