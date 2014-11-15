@@ -5,7 +5,7 @@ Phone number control for [Nette Framework](http://nette.org)
 [![SensioLabsInsight Status](https://insight.sensiolabs.com/projects/87599011-10dd-427c-946a-5383f88f5d8d/mini.png)](https://insight.sensiolabs.com/projects/87599011-10dd-427c-946a-5383f88f5d8d)
 [![Latest Stable Version](https://poser.pugx.org/nella/forms-phone/version.png)](https://packagist.org/packages/nella/forms-phone)
 [![Composer Downloads](https://poser.pugx.org/nella/forms-phone/d/total.png)](https://packagist.org/packages/nella/forms-phone)
-[![Dependency Status](https://www.versioneye.com/user/projects/534bc4e7fe0d0774a80000f4/badge.svg?style=flat)](https://www.versioneye.com/user/projects/534bc4e7fe0d0774a80000f4)
+[![Dependency Status](https://www.versioneye.com/user/projects/5467a452f8a4ae213300026e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5467a452f8a4ae213300026e)
 [![HHVM Status](http://hhvm.h4cc.de/badge/nella/forms-phone.svg)](http://hhvm.h4cc.de/package/nella/forms-phone)
 
 Installation
