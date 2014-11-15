@@ -17,7 +17,10 @@ before_script:
   - composer self-update
   - composer install --no-interaction --prefer-source --dev
   - composer create-project --prefer-source --dev --no-interaction jakub-onderka/php-parallel-lint parallel-lint ~0.8.0
+  - composer create-project --prefer-source --dev --no-interaction nette/code-checker code-checker ~2.2.0
 
 script:
     - php parallel-lint/parallel-lint.php -e php,phpt src tests
+    - php code-checker/src/code-checker.php -d src
+    - php code-checker/src/code-checker.php -d tests
     - vendor/bin/tester -s -p php tests
