@@ -1,12 +1,12 @@
 Phone number control for [Nette Framework](http://nette.org)
 =============================================================================================
 
-[![Build Status](https://travis-ci.org/nella/forms-phone.svg?branch=master)](https://travis-ci.org/nella/forms-phone)
-[![SensioLabsInsight Status](https://insight.sensiolabs.com/projects/87599011-10dd-427c-946a-5383f88f5d8d/mini.png)](https://insight.sensiolabs.com/projects/87599011-10dd-427c-946a-5383f88f5d8d)
-[![Latest Stable Version](https://poser.pugx.org/nella/forms-phone/version.png)](https://packagist.org/packages/nella/forms-phone)
-[![Composer Downloads](https://poser.pugx.org/nella/forms-phone/d/total.png)](https://packagist.org/packages/nella/forms-phone)
-[![Dependency Status](https://www.versioneye.com/user/projects/5467a452f8a4ae213300026e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5467a452f8a4ae213300026e)
-[![HHVM Status](http://hhvm.h4cc.de/badge/nella/forms-phone.svg)](http://hhvm.h4cc.de/package/nella/forms-phone)
+[![Build Status](https://img.shields.io/travis/nella/forms-phone.svg?style=flat-square)](https://travis-ci.org/nella/forms-phone)
+[![SensioLabsInsight Status](https://img.shields.io/sensiolabs/i/87599011-10dd-427c-946a-5383f88f5d8d.svg?style=flat-square)](https://insight.sensiolabs.com/projects/87599011-10dd-427c-946a-5383f88f5d8d)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nella/forms-phone.svg?style=flat-square)](https://packagist.org/packages/nella/forms-phone)
+[![Composer Downloads](https://img.shields.io/packagist/dt/nella/forms-phone.svg?style=flat-square)](https://packagist.org/packages/nella/forms-phone)
+[![Dependency Status](https://img.shields.io/versioneye/d/user/projects/5467a452f8a4ae213300026e.svg?style=flat-square)](https://www.versioneye.com/user/projects/5467a452f8a4ae213300026e)
+[![HHVM Status](https://img.shields.io/hhvm/nella/forms-phone.svg?style=flat-square)](http://hhvm.h4cc.de/package/nella/forms-phone)
 
 Installation
 ------------
