@@ -27,7 +27,8 @@
 		"nette/forms": "~2.2,<2.3.0"
 	},
 	"require-dev": {
-		"nette/tester": "~1.3.0"
+		"nette/tester": "~1.3.0",
+		"nella/coding-standard": "~1.1.0"
 	},
 	"suggest": {
 		"latte/latte": "For manual rendering support"
