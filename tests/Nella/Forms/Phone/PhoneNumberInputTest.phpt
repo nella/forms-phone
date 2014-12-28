@@ -1,6 +1,6 @@
 <?php
 /**
- * Test: Nella\Forms\Controls\PhoneNumberInput
+ * Test: Nella\Forms\Phone\PhoneNumberInput
  * @testCase
  *
  * This file is part of the Nella Project (http://nella-project.org).
@@ -11,7 +11,7 @@
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\Forms\Controls;
+namespace Nella\Forms\Phone;
 
 use Tester\Assert;
 
@@ -177,7 +177,7 @@ class PhoneNumberInputTest extends \Tester\TestCase
 
 		$form = new \Nette\Forms\Form;
 		$control = $form->addPhone('test', 'Test');
-		Assert::type('Nella\Forms\Controls\PhoneNumberInput', $control);
+		Assert::type('Nella\Forms\Phone\PhoneNumberInput', $control);
 		Assert::equal('test', $control->getName());
 		Assert::equal('Test', $control->caption);
 		Assert::same($form, $control->getForm());

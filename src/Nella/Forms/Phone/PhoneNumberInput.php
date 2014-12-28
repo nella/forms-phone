@@ -8,7 +8,7 @@
  * please view the file LICENSE.md that was distributed with this source code.
  */
 
-namespace Nella\Forms\Controls;
+namespace Nella\Forms\Phone;
 
 use Nette\Utils\Strings;
 use Nette\Forms\Form;

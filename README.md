@@ -21,11 +21,11 @@ Usage
 ```php
 
 $form = new \Nette\Forms\Form;
-$form->addComponent(new \Nella\Forms\Controls\PhoneNumberInput('Phone'), 'phone');
+$form->addComponent(new \Nella\Forms\Phone\PhoneNumberInput('Phone'), 'phone');
 
 // or
 
-\Nella\Forms\Controls\PhoneNumberInput::register();
+\Nella\Forms\Phone\PhoneNumberInput::register();
 $form->addPhone('phone', 'Phone');
 
 // Optional phone number validation
@@ -41,7 +41,7 @@ $control->setDefaultPrefix('+420');
 Manual rendering
 ----------------
 
-```smarty
+```latte
 {form myForm}
 	{label phone /}
 	{input phone:prefix}

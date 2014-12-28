@@ -13,4 +13,4 @@ function id($val) {
 	return $val;
 }
 
-require_once __DIR__ . '/../src/Nella/Forms/Controls/PhoneNumber.php';
+require_once __DIR__ . '/../src/Nella/Forms/Phone/PhoneNumberInput.php';
