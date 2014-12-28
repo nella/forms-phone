@@ -17,8 +17,6 @@ use Nette\Forms\Form;
  * Phone number form control
  *
  * @author Patrik Votoček
- *
- * @property string $value
  */
 class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 {
@@ -321,7 +319,7 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 
 	/**
 	 * @param string
-	 * @return \Nella\Forms\Controls\PhoneNumberInput
+	 * @return \Nella\Forms\Phone\PhoneNumberInput
 	 * @throws \Nette\InvalidArgumentException
 	 */
 	public function setValue($value)
@@ -369,7 +367,7 @@ class PhoneNumberInput extends \Nette\Forms\Controls\BaseControl
 
 	/**
 	 * @param string
-	 * @return \Nella\Forms\Controls\PhoneNumberInput
+	 * @return \Nella\Forms\Phone\PhoneNumberInput
 	 */
 	public function setDefaultPrefix($prefix)
 	{
