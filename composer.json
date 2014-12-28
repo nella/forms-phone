@@ -22,6 +22,9 @@
 			"Nella\\Forms\\Phone\\": "src/Nella/Forms/Phone"
 		}
 	},
+	"autoload-dev": {
+		"classmap": ["tests/Nella"]
+	},
 	"require": {
 		"php": ">=5.3.1",
 		"nette/forms": "~2.2,<2.3.0"
