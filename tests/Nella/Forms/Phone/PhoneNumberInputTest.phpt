@@ -75,7 +75,7 @@ class PhoneNumberInputTest extends \Tester\TestCase
 	{
 		$control = new PhoneNumberInput;
 
-		Assert::exception(function() use($control, $input) {
+		Assert::exception(function() use ($control, $input) {
 			$control->setValue($input);
 		}, 'Nette\InvalidArgumentException');
 	}
@@ -89,7 +89,7 @@ class PhoneNumberInputTest extends \Tester\TestCase
 
 		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('number'));
 
-		Assert::true($dq->has("input[value=234567890]"));
+		Assert::true($dq->has('input[value=234567890]'));
 	}
 
 	public function testHtmlPartPrefix()
@@ -113,7 +113,7 @@ class PhoneNumberInputTest extends \Tester\TestCase
 
 		$dq = \Tester\DomQuery::fromHtml((string) $control->getControl());
 
-		Assert::true($dq->has("input[value=234567890]"));
+		Assert::true($dq->has('input[value=234567890]'));
 		Assert::true($dq->has('select option[value=+420][selected]'));
 	}
 
@@ -188,18 +188,18 @@ class PhoneNumberInputTest extends \Tester\TestCase
 		$control = $this->createControl();
 
 		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('prefix'));
-		Assert::false($dq->has("select option[selected]"));
+		Assert::false($dq->has('select option[selected]'));
 
 		$control->setDefaultPrefix('+420');
 
 		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('prefix'));
-		Assert::true($dq->has("select option[selected]"));
-		Assert::true($dq->has("select option[value=+420][selected]"));
+		Assert::true($dq->has('select option[selected]'));
+		Assert::true($dq->has('select option[value=+420][selected]'));
 
 		$control->setDefaultPrefix(NULL);
 
 		$dq = \Tester\DomQuery::fromHtml((string) $control->getControlPart('prefix'));
-		Assert::false($dq->has("select option[selected]"));
+		Assert::false($dq->has('select option[selected]'));
 	}
 
 	/**
